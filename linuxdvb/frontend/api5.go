@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"github.com/ziutek/dvb"
+	"../../"
 )
 
 type Device struct {

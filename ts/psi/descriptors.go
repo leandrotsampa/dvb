@@ -4,7 +4,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ziutek/dvb"
+	"../../"
 )
 
 // TODO: Reconsider all descriptors decoding/encoding code. Goals:

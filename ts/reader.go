@@ -1,10 +1,11 @@
 package ts
 
 import (
-	"github.com/ziutek/dvb"
 	"io"
 	"os"
 	"syscall"
+
+	"../"
 )
 
 var (

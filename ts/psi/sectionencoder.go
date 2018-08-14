@@ -1,7 +1,7 @@
 package psi
 
 import (
-	"github.com/ziutek/dvb/ts"
+	"../"
 )
 
 // SectionEncoder can encode sections into stream of MPEG-TS packets. It has
@@ -74,13 +74,13 @@ func (e *SectionEncoder) WriteSection(s Section) error {
 				return err
 			}
 			e.pkt.SetPayloadUnitStart(true) // section will start in new packet
-			e.pkt.Payload()[0] = 0      // set pointer_field in new packet
+			e.pkt.Payload()[0] = 0          // set pointer_field in new packet
 			e.offset++
 		} else {
 			// There is place for at least one byte of new section in this
 			// packet.
-			copy(p[1:], p[:e.offset])   // move data to add pointer field
-			p[0] = byte(e.offset)       // set pointer_field
+			copy(p[1:], p[:e.offset])       // move data to add pointer field
+			p[0] = byte(e.offset)           // set pointer_field
 			e.pkt.SetPayloadUnitStart(true) // section starts in current packet
 			e.offset++
 			n := copy(p[e.offset:], s)
@@ -95,7 +95,7 @@ func (e *SectionEncoder) WriteSection(s Section) error {
 	} else {
 		// e.pkt is empty.
 		e.pkt.SetPayloadUnitStart(true) // section will start in e.pkt
-		e.pkt.Payload()[0] = 0      // pointer_field
+		e.pkt.Payload()[0] = 0          // pointer_field
 		e.offset++
 	}
 	// At this point we allways have an empty e.pkt with valid header,

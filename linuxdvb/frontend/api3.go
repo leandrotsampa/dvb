@@ -3,11 +3,12 @@ package frontend
 import (
 	"bytes"
 	"fmt"
-	"github.com/ziutek/dvb"
 	"strings"
 	"syscall"
 	"time"
 	"unsafe"
+
+	"../../"
 )
 
 type Caps uint32

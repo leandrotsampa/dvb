@@ -1,7 +1,7 @@
 package psi
 
 import (
-	"github.com/ziutek/dvb"
+	"../../"
 )
 
 type NIT Table

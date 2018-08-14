@@ -1,8 +1,8 @@
 package psi
 
 import (
-	"github.com/ziutek/dvb"
-	"github.com/ziutek/dvb/ts"
+	"../"
+	"../../"
 )
 
 var (

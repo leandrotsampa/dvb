@@ -1,8 +1,9 @@
 package psi
 
 import (
-	"github.com/ziutek/dvb"
 	"time"
+
+	"../../"
 )
 
 const TDTSectionLen = 3 + 5
